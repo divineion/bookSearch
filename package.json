@@ -1,0 +1,12 @@
+{
+  "name": "booksearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "sass": "sass --watch /css/bootstrap.min.css /css/scss/main.scss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
