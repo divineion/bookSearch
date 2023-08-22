@@ -12,7 +12,7 @@ class Book {
     public ?string $authorLastFirst;
     public ?string $description;
     public ?string $language;
-    public ?string $genres;
+    public ?array $genres;
     public ?string $characters;
     public ?string $setting;
     public ?string $coverImg;
@@ -39,7 +39,10 @@ class Book {
         $this->authorLastFirst = trim(strtolower($book['authorLastFirst']));
         $this->description = trim(strtolower($book['description']));
         $this->language = trim(strtolower($book['language']));
-        $this->genres = trim(strtolower($book['genres']));
+        
+        $tempGenres = explode(',', trim(strtolower($book['genres'])));
+        $this->genres = $tempGenres;
+
         $this->characters = trim(strtolower($book['characters']));
         $this->setting = trim(strtolower($book['setting']));
         $this->coverImg = $book['coverImg'];
